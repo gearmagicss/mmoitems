@@ -7,10 +7,4 @@
 	<version>6.5.8</version>
 	<name>MMOItems</name>
 	<description>A great item solution for your RPG server!</description>
-
-	<properties>
-		<downloadSources>false</downloadSources>
-		<downloadJavadocs>false</downloadJavadocs>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-       </project>
+</project>
