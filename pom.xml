@@ -46,5 +46,7 @@
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
+			</plugins>
+		</plugins>
        </plugins>\n\t<dependencies>
 </project>
