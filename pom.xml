@@ -1,4 +1,5 @@
   
+  
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,7 +8,7 @@
 
     <groupId>net.Indyuce</groupId>
     <artifactId>MMoitems</artifactId>
-    <version>6.5.8</version>
+    <version>1.5.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
