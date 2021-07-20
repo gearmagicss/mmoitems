@@ -1,64 +1,13 @@
-buildscript {
-    repositories {
-        maven { url 'https://plugins.gradle.org/m2' }
-    }
-
-    dependencies {
-        classpath 'gradle.plugin.net.minecrell:licenser:0.4.1'
-    }
+plugins {
 }
 
-defaultTasks 'licenseFormat', 'build'
+group = "net.Indyuce"
+version = "2.19.0-SNAPSHOT"
 
-subprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven'
-    apply plugin: 'net.minecrell.licenser'
+project.ext {
+    GIT_COMMIT = !indraGit.isPresent() ? "unknown" : indraGit.commit().abbreviate(7).name()
+    GIT_DEPTH = GitUtil.commitsSinceLastTag(project)
+    GIT_BRANCH = GitUtil.headBranchName(project)
 
-    group = 'net.Indyuce'
-    version = '6.5.8'
-
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
-    tasks.withType(JavaCompile) {
-        options.encoding = 'UTF-8'
-    }
-
-    jar {
-        from '../LICENSE.txt'
-    }
-
-    def determinePatchVersion = {
-        // get the name of the last tag
-        def tagInfo = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'describe', '--tags'
-            standardOutput = tagInfo
-        }
-        tagInfo = tagInfo.toString()
-
-        if (!tagInfo.contains('-')) {
-            return 0
-        }
-        return tagInfo.split("-")[1]
-    }
-
-    project.ext.majorVersion = '5'
-    project.ext.minorVersion = '3'
-    project.ext.patchVersion = determinePatchVersion()
-    project.ext.apiVersion = project.ext.majorVersion + '.' + project.ext.minorVersion
-    project.ext.fullVersion = project.ext.apiVersion + '.' + project.ext.patchVersion
-
-    license {
-        header = rootProject.file('HEADER.txt')
-        include '**/*.java'
-        newLine = true
-    }
-
-    repositories {
-        mavenCentral()
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-        maven { url 'https://repo.lucko.me/' }
-    }
+    FULL_VERSION = "${version}".replace("-SNAPSHOT", "-dev+${GIT_DEPTH}-${GIT_COMMIT}")
 }
