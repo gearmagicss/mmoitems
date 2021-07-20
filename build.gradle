@@ -1,13 +1,33 @@
-plugins {
+// Information for all projects
+
+// The default tasks for all projects
+defaultTasks 'clean', 'build', 'createReleaseJar', 'install'
+
+allprojects
+{
+    version = "6.5.8"
+    group = "net.Indyuce"
 }
 
-group = "net.Indyuce"
-version = "2.19.0-SNAPSHOT"
+// Information for all subprojects
+// (common, forge and bukkit, but not this file)
+subprojects
+{   task ->
 
-project.ext {
-    GIT_COMMIT = !indraGit.isPresent() ? "unknown" : indraGit.commit().abbreviate(7).name()
-    GIT_DEPTH = GitUtil.commitsSinceLastTag(project)
-    GIT_BRANCH = GitUtil.headBranchName(project)
+    task.plugins.withType(org.gradle.api.plugins.JavaBasePlugin)
+    {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
 
-    FULL_VERSION = "${version}".replace("-SNAPSHOT", "-dev+${GIT_DEPTH}-${GIT_COMMIT}")
+        // Generate Eclipse config files when using "gradle eclipse"
+        task.apply plugin: 'eclipse'
+
+        // Generate IntelliJ IDEA config files
+        task.apply plugin: 'idea'
+
+    }
+
+    // Generate a pom.xml, upload to local Maven repository
+    apply plugin: 'maven'
+
 }
