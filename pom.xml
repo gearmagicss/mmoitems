@@ -1,4 +1,3 @@
-  
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -6,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>net.Indyuce</groupId>
-  <artifactId>MMoitems</artifactId>
-  <name>MMoitems</name>
-  <version>6.5.8-SNAPSHOT</version>
+  <artifactId>mobarena</artifactId>
+  <name>MobArena</name>
+  <version>0.106.1-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,13 +26,13 @@
         </configuration>
       </plugin>
 
-      <!-- Rename the final jar-file to MMoitems.jar -->
+      <!-- Rename the final jar-file to MobArena.jar -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.0</version>
         <configuration>
-          <finalName>MMoitems</finalName>
+          <finalName>MobArena</finalName>
         </configuration>
       </plugin>
 
