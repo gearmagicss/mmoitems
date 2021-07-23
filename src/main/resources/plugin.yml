@@ -1,0 +1,8 @@
+main: net.gearvn.works.WorksMod
+name: works
+version: 1.0.0
+authors: [member, MCreator]
+website: https://mcreator.net
+api-version: 1.16
+
+commands:
