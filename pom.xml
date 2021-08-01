@@ -130,13 +130,6 @@
 			<systemPath>${basedir}/lib/gson-2.8.5.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>com.github.klyser8.iridescent</groupId>
-			<artifactId>Iridescent</artifactId>
-			<version>1.2.2</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/Iridescent-1.2.1.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>com.github.RednedEpic</groupId>
 			<artifactId>PhatLoots</artifactId>
 			<version>master-dev-build-79-g4ab7dd1-97</version>
