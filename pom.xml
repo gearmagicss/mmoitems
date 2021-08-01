@@ -131,8 +131,6 @@
 			<groupId>com.github.klyser8.iridescent</groupId>
 			<artifactId>Iridescent</artifactId>
 			<version>1.2.2</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/Iridescent.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.github.RednedEpic</groupId>
