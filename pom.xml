@@ -105,13 +105,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>GoogleGSON</artifactId>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/GoogleGSON.jar</systemPath>
-        </dependency>
-
-        <dependency>
             <groupId>com.mojang</groupId>
             <artifactId>authlib</artifactId>
             <version>1.5.21</version>
