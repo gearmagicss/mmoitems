@@ -100,7 +100,7 @@
 	<dependency>
 		<groupId>org.spigotmc</groupId>
 		<artifactId>spigot-api</artifactId>
-		<version>amalgam</version>
+		<version>1.10</version>
 		<scope>system</scope>
 		<systemPath>${basedir}/lib/spigot.jar</systemPath>
 	</dependency>
@@ -124,7 +124,7 @@
             <artifactId>MythicLib</artifactId>
             <version>1.1.1</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/MythicLib-1.7.4.jar</systemPath>
+            <systemPath>${basedir}/lib/MythicLib.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
