@@ -95,7 +95,7 @@
 			<artifactId>MMOCore</artifactId>
 			<version>1.7.1</version>
 			<scope>provided</scope>
-			<systemPath>${basedir}/lib/MMOCore.jar</systemPath>
+			<systemPath>${basedir}/lib/MMOCore-1.7.1.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>io.lumine</groupId>
@@ -142,7 +142,7 @@
 			<artifactId>Iridescent</artifactId>
 			<version>1.2.1</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/lib/Iridescent.jar</systemPath>
+			<systemPath>${basedir}/lib/Iridescent-1.2.1.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.github.RednedEpic</groupId>
