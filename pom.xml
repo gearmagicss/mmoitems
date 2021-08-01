@@ -98,11 +98,11 @@
 
         <!-- Spigot API -->
  	<dependency>
-		<groupId>org.spigotmc</groupId>
-		<artifactId>spigot-api</artifactId>
-		<version>1.10</version>
+                <groupId>org.spigotmc</groupId>
+                <artifactId>spigot-api</artifactId>
+                <version>1.17-R0.1-SNAPSHOT</version>
 	        <scope>system</scope>
-		<systemPath>${basedir}/Lib/spigot.jar</systemPath>
+		<systemPath>${basedir}/Lib/spigotapi.jar</systemPath>
 		</dependency>
 	<dependency>
 		<groupId>com.mojang</groupId>
