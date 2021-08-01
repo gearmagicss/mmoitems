@@ -1,144 +1,192 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.gearvn</groupId>
-	<artifactId>MMOItems</artifactId>
-	<version>6.5.8</version>
-	<name>MMOItems</name>
-	<description>A great item solution for your RPG server!</description>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.gearvn</groupId>
+    <artifactId>MMOItems</artifactId>
+    <version>6.6.0</version>
+    <name>MMOItems</name>
+    <description>A great item solution for your RPG server!!</description>
 
-	<properties>
-		<downloadSources>false</downloadSources>
-		<downloadJavadocs>false</downloadJavadocs>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
+    <properties>
+        <downloadSources>false</downloadSources>
+        <downloadJavadocs>false</downloadJavadocs>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 
-	<distributionManagement>
-		<repository>
+    <distributionManagement>
+        <repository>
 			<id>nexus</id>
 			<name>Lumine Releases</name>
-			<url>http://mvn.lumine.io/repository/maven-releases/</url>
+			<url>https://mvn.lumine.io/repository/maven-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>Lumine Snapshots</name>
-			<url>http://mvn.lumine.io/repository/maven-snapshots/</url>
+			<url>https://mvn.lumine.io/repository/maven-snapshots/</url>
 		</snapshotRepository>
-	</distributionManagement>
 
-	<build>
-		<finalName>${project.name}-${project.version}</finalName>
-		<resources>
-			<resource>
-				<filtering>true</filtering>
-				<directory>${basedir}/src/main/resources/</directory>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-	<repositories>
-		<repository>
-			<id>lumine-repo</id>
-			<url>https://mvn.lumine.io/repository/maven-public/</url>
-		</repository>
-		<repository>
-			<id>mojang</id>
-			<url>https://libraries.minecraft.net/</url>
-		</repository>
-		<repository>
-			<id>sk89q-repo</id>
-			<url>https://maven.enginehub.org/repo/</url>
-		</repository>
-		<repository>
-			<id>inventive-repo</id>
-			<url>https://repo.inventivetalent.org/content/groups/public/</url>
-		</repository>
-		<repository>
-			<id>placeholderapi</id>
-			<url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
-		</repository>
-		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
-		</repository>
-	</repositories>
-	<dependencies>
-		<!-- Minecraft -->
-		<dependency>
-			<groupId>com.mojang</groupId>
-			<artifactId>authlib</artifactId>
-			<version>1.5.21</version>
-		</dependency>
+    </distributionManagement>
 
-		<!-- MMOs -->
-		<dependency>
-			<groupId>net.Indyuce</groupId>
-			<artifactId>MMOCore</artifactId>
-			<version>1.7.1</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.lumine</groupId>
-			<artifactId>MythicLib</artifactId>
-			<version>1.0.19</version>
-			<scope>provided</scope>
-		</dependency>
+    <build>
+        <finalName>${project.name}-${project.version}</finalName>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${basedir}/src/main/resources/</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-		<!-- USING THIS FOR INTERNAL TESTING -->
-<!--		<dependency>-->
-<!--			<groupId>io.lumine</groupId>-->
-<!--			<artifactId>MythicLib</artifactId>-->
-<!--			<version>1.0.0</version>-->
-<!--			<scope>system</scope>-->
-<!--			<systemPath>${basedir}/lib/MythicLib.jar</systemPath>-->
-<!--		</dependency>-->
+    <repositories>
 
-		<!--
-		<dependency>
-			<groupId>net.Indyuce</groupId>
-			<artifactId>MMOLib</artifactId>
-			<version>1.7.3</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/MMOLib.jar</systemPath>
-		</dependency>
-		-->
+        <repository>
+            <id>lumine</id>
+            <url>https://mvn.lumine.io/repository/maven/</url>
+        </repository>
 
-		<!-- APIs -->
-		<dependency>
-			<groupId>org.jetbrains</groupId>
-			<artifactId>annotations</artifactId>
-			<version>19.0.0</version>
-		</dependency>
-<dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.8.7</version>
-</dependency>
-		<dependency>
-			<groupId>com.github.klyser8.iridescent</groupId>
-			<artifactId>Iridescent</artifactId>
-			<version>1.2.2</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/Iridescent.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.github.RednedEpic</groupId>
-			<artifactId>PhatLoots</artifactId>
-			<version>master-dev-build-79-g4ab7dd1-97</version>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
+        <repository>
+            <id>mojang</id>
+            <url>https://libraries.minecraft.net/</url>
+        </repository>
+
+        <repository>
+            <id>sk89q-repo</id>
+            <url>https://maven.enginehub.org/repo/</url>
+        </repository>
+
+        <repository>
+            <id>inventive-repo</id>
+            <url>https://repo.inventivetalent.org/content/groups/public/</url>
+        </repository>
+
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+
+        <!-- Repository used to fetch all Spigot builds -->
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+    </repositories>
+
+    <!-- Order of dependencies matters in Maven because the first wins when
+        multiple classes match. -->
+
+    <dependencies>
+
+        <!-- Spigot API -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.17-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.Indyuce.mmoitems.lib</groupId>
+            <artifactId>GoogleGSON</artifactId>
+            <version>2.8.5</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.21</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.Indyuce</groupId>
+            <artifactId>MMOCore</artifactId>
+            <version>1.7.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>MythicLib</artifactId>
+            <version>1.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>MythicEnchants</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>19.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.RednedEpic</groupId>
+            <artifactId>PhatLoots</artifactId>
+            <version>master-dev-build-79-g4ab7dd1-97</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.9.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lumine.xikage</groupId>
+            <artifactId>MythicMobs</artifactId>
+            <version>4.11.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>LumineUtils</artifactId>
+            <version>1.16.1-20210326.031037-28</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sk89q.worldguard</groupId>
+            <artifactId>worldguard-bukkit</artifactId>
+            <version>7.0.2-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>provided</scope>
+        </dependency>
+	    
+    </dependencies>
 </project>
+
