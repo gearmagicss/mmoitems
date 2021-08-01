@@ -113,9 +113,9 @@
         <dependency>
             <groupId>net.Indyuce</groupId>
             <artifactId>MMOCore</artifactId>
-            <version>1.7.4</version>
+            <version>1.7.1</version>
             <scope>system</scope>
-	    <systemPath>${basedir}/lib/MMOLib.jar</systemPath>
+	    <systemPath>${basedir}/lib/MMOCORE.jar</systemPath>
         </dependency>
 
         <dependency>
