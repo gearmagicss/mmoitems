@@ -102,7 +102,7 @@
 		<artifactId>spigot-api</artifactId>
 		<version>1.10</version>
 	        <scope>system</scope>
-		<systemPath>${basedir}/lib/spigot.jar</systemPath>
+		<systemPath>${basedir}/Lib/spigot.jar</systemPath>
 		</dependency>
 	<dependency>
 		<groupId>com.mojang</groupId>
