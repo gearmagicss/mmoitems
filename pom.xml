@@ -113,15 +113,17 @@
         <dependency>
             <groupId>net.Indyuce</groupId>
             <artifactId>MMOCore</artifactId>
-            <version>1.7.1</version>
-            <scope>provided</scope>
+            <version>1.7.4</version>
+            <scope>system</scope>
+	    <systemPath>${basedir}/lib/MMOLib.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.lumine</groupId>
             <artifactId>MythicLib</artifactId>
             <version>1.1.1</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+	    <systemPath>${basedir}/lib/MythicLib.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -137,25 +139,27 @@
             <version>19.0.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.RednedEpic</groupId>
-            <artifactId>PhatLoots</artifactId>
-            <version>master-dev-build-79-g4ab7dd1-97</version>
-            <scope>provided</scope>
-        </dependency>
+	<dependency>
+		<groupId>com.github.RednedEpic</groupId>
+		<artifactId>PhatLoots</artifactId>
+		<version>master-dev-build-79-g4ab7dd1-97</version>
+		<scope>provided</scope>
+	</dependency>
 
         <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>2.9.2</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${basedir}/Lib/PHA.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.lumine.xikage</groupId>
             <artifactId>MythicMobs</artifactId>
             <version>4.11.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+	    <systemPath>${basedir}/Lib/MythicMobs</systemPath>
         </dependency>
     </dependencies>
 </project>
