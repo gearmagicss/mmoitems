@@ -107,7 +107,7 @@
 		<artifactId>spigot-api</artifactId>
 		<version>1.17-R0.1-SNAPSHOT</version>
 		<scope>system</scope>
-		<systemPath>${basedir}/Lib/spigotapi.jar</systemPath>
+		<systemPath>${basedir}/Lib/spigot-api.jar</systemPath>
 	</dependency>
 	    
         <dependency>
