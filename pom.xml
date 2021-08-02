@@ -107,7 +107,7 @@
 		<artifactId>spigot-api</artifactId>
 		<version>1.17-R0.1-SNAPSHOT</version>
 		<scope>system</scope>
-		<systemPath>${basedir}/Lib/spigot.jar</systemPath>
+		<systemPath>${basedir}/Lib/spigot-api.jar</systemPath>
 	</dependency>
 	    
         <dependency>
@@ -152,7 +152,7 @@
             <artifactId>GoogleGSON</artifactId>
             <version>2.8.5</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/spigot.jar</systemPath>
+            <systemPath>${basedir}/lib/spigot-api.jar</systemPath>
         </dependency>
 
         <dependency>
