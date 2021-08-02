@@ -1,12 +1,13 @@
+<!--suppress MavenModelInspection -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.Indyuce</groupId>
+    <groupId>net.indyuce</groupId>
     <artifactId>MMOItems</artifactId>
     <version>6.6.0</version>
     <name>MMOItems</name>
-    <description>A great item solution for your RPG server!!</description>
+    <description>MMoitems Version VN make by oNGeaZ!!</description>
 
     <properties>
         <downloadSources>false</downloadSources>
@@ -17,15 +18,15 @@
 
     <distributionManagement>
         <repository>
-			<id>nexus</id>
-			<name>Lumine Releases</name>
-			<url>https://mvn.lumine.io/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>Lumine Snapshots</name>
-			<url>https://mvn.lumine.io/repository/maven-snapshots/</url>
-		</snapshotRepository>
+            <id>nexus</id>
+            <name>Lumine Releases</name>
+            <url>https://mvn.lumine.io/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Lumine Snapshots</name>
+            <url>https://mvn.lumine.io/repository/maven-snapshots/</url>
+        </snapshotRepository>
 
     </distributionManagement>
 
@@ -95,5 +96,91 @@
         multiple classes match. -->
 
     <dependencies>
+
+        <!-- Spigot API -->
+         <dependency>
+		<groupId>org.spigotmc</groupId>
+		<artifactId>spigot-api</artifactId>
+	        <version>1.17</version>
+		<scope>system</scope>
+		<systemPath>${project.basedir}/lib/spigot-api.jar</systemPath>
+	</dependency>
+	 
+        <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>GoogleGSON</artifactId>
+                <version>2.8.5</version>
+                <scope>system</scope>
+                <systemPath>${project.basedir}/lib/GoogleGSON.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.21</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.Indyuce</groupId>
+            <artifactId>MMOCore</artifactId>
+            <version>1.7.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/MMOCORE.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>MythicLib</artifactId>
+            <version>1.1.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/MythicLib.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>19.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.RednedEpic</groupId>
+            <artifactId>PhatLoots</artifactId>
+            <version>master-dev-build-79-g4ab7dd1-97</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/PhatLoots.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.9.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/PHA.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>io.lumine.xikage</groupId>
+            <artifactId>MythicMobs</artifactId>
+            <version>4.11.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/MythicMobs.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sk89q.worldguard</groupId>
+            <artifactId>worldguard-bukkit</artifactId>
+            <version>7.0.2-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/worldguard-bukkit-7.0.5-dist.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/Vault.jar</systemPath>
+        </dependency>
     </dependencies>
 </project>
