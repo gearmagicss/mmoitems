@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VaultAPI">
+    <output-path>$PROJECT_DIR$/out/artifacts/VaultAPI</output-path>
+    <root id="archive" name="VaultAPI.jar" />
+  </artifact>
+</component>

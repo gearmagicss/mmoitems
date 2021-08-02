@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="worldguard-bukkit">
+    <output-path>$PROJECT_DIR$/out/artifacts/worldguard_bukkit</output-path>
+    <root id="archive" name="worldguard-bukkit.jar" />
+  </artifact>
+</component>

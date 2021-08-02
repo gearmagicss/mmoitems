@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MMOCore">
+    <output-path>$PROJECT_DIR$/out/artifacts/MMOCore</output-path>
+    <root id="archive" name="MMOCore.jar" />
+  </artifact>
+</component>

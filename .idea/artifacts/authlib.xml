@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="authlib">
+    <output-path>$PROJECT_DIR$/out/artifacts/authlib</output-path>
+    <root id="archive" name="authlib.jar" />
+  </artifact>
+</component>
