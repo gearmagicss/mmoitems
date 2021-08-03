@@ -30,7 +30,7 @@
 
     </distributionManagement>
 
-   <plugin>
+  <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-jar-plugin</artifactId>
   <version>3.0.2</version>
@@ -86,8 +86,6 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-
-    </repositories>
 
     <!-- Order of dependencies matters in Maven because the first wins when
         multiple classes match. -->
