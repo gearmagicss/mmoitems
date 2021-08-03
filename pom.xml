@@ -1,16 +1,12 @@
-<!-- https://mvnrepository.com/artifact/org.Apache.maven.plugins/maven-jar-plugin -->
-<plugin>
-    <groupId>net.Indyuce</groupId>
-    <artifactId>MMOItems</artifactId>
-    <version>3.1.0</version>
-    <!-- Ignore src/main in JAR packaging -->
-    <configuration>
-        <classesDirectory>src</classesDirectory>
-        <excludes>
-            <exclude>main</exclude>
-        </excludes>
-    </configuration>
-</plugin>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.Indyuce</groupId>
+	<artifactId>MMOItems</artifactId>
+	<version>6.5.8</version>
+	<name>MMOItems</name>
+	<description>A great item solution for your RPG server!</description>
 
 	<properties>
 		<downloadSources>false</downloadSources>
@@ -53,6 +49,18 @@
     </executions>
 </plugin>
 		</plugins>
+<plugin>
+    <groupId>org.Apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.1.0</version>
+    <!-- Ignore src/main in JAR packaging -->
+    <configuration>
+        <classesDirectory>src</classesDirectory>
+        <excludes>
+            <exclude>main</exclude>
+        </excludes>
+    </configuration>
+</plugin>
 	</build>
 	<repositories>
 		<repository>
