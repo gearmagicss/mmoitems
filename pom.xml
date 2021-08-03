@@ -9,61 +9,86 @@
     <name>MMOItems</name>
     <description>MMoitems Version VN make by oNGeaZ!!</description>
 
-    <properties>
-        <downloadSources>false</downloadSources>
-        <downloadJavadocs>false</downloadJavadocs>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
+   
+	<properties>
+		<downloadSources>false</downloadSources>
+		<downloadJavadocs>false</downloadJavadocs>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <name>Lumine Releases</name>
-            <url>https://mvn.lumine.io/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>Lumine Snapshots</name>
-            <url>https://mvn.lumine.io/repository/maven-snapshots/</url>
-        </snapshotRepository>
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Lumine Releases</name>
+			<url>http://mvn.lumine.io/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Lumine Snapshots</name>
+			<url>http://mvn.lumine.io/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
-    </distributionManagement>
-
- <build>
-  <finalName>${project.artifactId}-${project.version}</finalName>
-  <sourceDirectory>src</sourceDirectory>
-  <testSourceDirectory>test</testSourceDirectory>
-  <resources>
-    <resource>
-      <directory>src</directory>
-      <excludes>
-        <exclude>**/*.java</exclude>
-      </excludes>
-    </resource>
-  </resources>
-  <testResources>
-    <testResource>
-      <directory>test</directory>
-      <excludes>
-        <exclude>**/*.java</exclude>
-      </excludes>
-    </testResource>
-  </testResources>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-compiler-plugin</artifactId>
-      <version>${maven-compiler-plugin.version}</version>
-      <configuration>
-        <source>${maven.compiler.source}</source>
-        <target>${maven.compiler.target}</target>
-      </configuration>
-    </plugin>
-  </plugins>
-
-</build>
-
+	<build>
+		<finalName>${project.name}-${project.version}</finalName>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>${basedir}/src/main/resources/</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+	<plugin>
+    <groupId>org.Apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.1.0</version>
+    <executions>
+        <execution>
+            <id>default-jar</id>
+            <phase>none</phase>
+        </execution>
+    </executions>
+</plugin>
+	</build>
+	<repositories>
+		<repository>
+			<id>lumine-repo</id>
+			<url>https://mvn.lumine.io/repository/maven-public/</url>
+		</repository>
+		<repository>
+			<id>mojang</id>
+			<url>https://libraries.minecraft.net/</url>
+		</repository>
+		<repository>
+			<id>sk89q-repo</id>
+			<url>https://maven.enginehub.org/repo/</url>
+		</repository>
+		<repository>
+			<id>inventive-repo</id>
+			<url>https://repo.inventivetalent.org/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>placeholderapi</id>
+			<url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+		</repository>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+<dependencies>
+		
          <dependency>
 		<groupId>org.spigotmc</groupId>
 		<artifactId>spigot-api</artifactId>
