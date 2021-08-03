@@ -6,35 +6,22 @@
     <artifactId>MMOItems</artifactId>
     <version>6.6.0</version>
     <name>MMOItems</name>
-    <description>A great item solution for your RPG server!!</description>
+     <packaging>jar</packaging>
 
+    
     <properties>
-        <downloadSources>false</downloadSources>
-        <downloadJavadocs>false</downloadJavadocs>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <suiteXmlFile>${basedir}/src/test/resources/testng.xml</suiteXmlFile>
+        <skipTests>true</skipTests>
     </properties>
-
-    <distributionManagement>
-        <repository>
-			<id>nexus</id>
-			<name>Lumine Releases</name>
-			<url>https://mvn.lumine.io/repository/maven-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>Lumine Snapshots</name>
-			<url>https://mvn.lumine.io/repository/maven-snapshots/</url>
-		</snapshotRepository>
-
-    </distributionManagement>
-
     <build>
-        <finalName>${project.name}-${project.version}</finalName>
+        <defaultGoal>clean package install</defaultGoal>
+        <finalName>GlobalWarming</finalName>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
             <resource>
+                <directory>src/main/resources</directory>
                 <filtering>true</filtering>
-                <directory>${basedir}/src/main/resources/</directory>
             </resource>
         </resources>
         <plugins>
@@ -45,56 +32,53 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <!-- Build with '-DskipTests=true' to bypass test execution @ build time Default: false -->
+                    <skipTests>${skipTests}</skipTests>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml
+                    </dependencyReducedPomLocation>
+                    <relocations>
+                        <relocation>
+                            <pattern>co.aikar.commands</pattern>
+                            <shadedPattern>net.porillo.shade.aikar</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <shadedPattern>net.porillo.shade.bstats</shadedPattern>
+                        </relocation>
+                    </relocations>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-
-        <repository>
-            <id>lumine</id>
-            <url>https://mvn.lumine.io/repository/maven/</url>
-        </repository>
-
-        <repository>
-            <id>mojang</id>
-            <url>https://libraries.minecraft.net/</url>
-        </repository>
-
-        <repository>
-            <id>sk89q-repo</id>
-            <url>https://maven.enginehub.org/repo/</url>
-        </repository>
-
-        <repository>
-            <id>inventive-repo</id>
-            <url>https://repo.inventivetalent.org/content/groups/public/</url>
-        </repository>
-
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-
-        <repository>
-            <id>placeholderapi</id>
-            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
-        </repository>
-
-        <!-- Repository used to fetch all Spigot builds -->
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-
-    </repositories>
-
-    <!-- Order of dependencies matters in Maven because the first wins when
-        multiple classes match. -->
-
-    <dependencies>
 	  
          <dependency>
 		<groupId>org.spigotmc</groupId>
