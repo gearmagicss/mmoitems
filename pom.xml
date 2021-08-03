@@ -30,39 +30,24 @@
 
     </distributionManagement>
 
-    <build>
-  <finalName>${project.artifactId}-${project.version}</finalName>
-  <sourceDirectory>src</sourceDirectory>
-  <testSourceDirectory>test</testSourceDirectory>
-  <resources>
-    <resource>
-      <directory>src</directory>
-      <excludes>
-        <exclude>**/*.java</exclude>
-      </excludes>
-    </resource>
-  </resources>
-  <testResources>
-    <testResource>
-      <directory>test</directory>
-      <excludes>
-        <exclude>**/*.java</exclude>
-      </excludes>
-    </testResource>
-  </testResources>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-compiler-plugin</artifactId>
-      <version>${maven-compiler-plugin.version}</version>
+   <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-jar-plugin</artifactId>
+  <version>3.0.2</version>
+  <executions>
+    <execution>
+      <id>service-jar</id>
+      <phase>package</phase>
+      <goals>
+        <goal>jar</goal>
+      </goals>
       <configuration>
-        <source>${maven.compiler.source}</source>
-        <target>${maven.compiler.target}</target>
+        <classifier>bak</classifier> <!-- Deploy-0.0.1-SNAPSHOT-bak.jar -->
+        <classesDirectory>${project.build.directory}/webservice/</classesDirectory>
       </configuration>
-    </plugin>
-  </plugins>
-
-</build>
+    </execution>
+  </executions>
+</plugin>
 
     <repositories>
 
