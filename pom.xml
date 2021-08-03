@@ -48,10 +48,6 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
             <id>papermc</id>
             <url>https://papermc.io/repo/repository/maven-public/</url>
         </repository>
@@ -102,13 +98,6 @@
                 <version>2.8.5</version>
                 <scope>system</scope>
                 <systemPath>${project.basedir}/lib/GoogleGSON.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>com.mojang</groupId>
-            <artifactId>authlib</artifactId>
-            <version>1.5.21</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
