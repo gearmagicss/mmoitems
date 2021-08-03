@@ -1,13 +1,16 @@
-<!--suppress MavenModelInspection -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>net.indyuce</groupId>
+<!-- https://mvnrepository.com/artifact/org.Apache.maven.plugins/maven-jar-plugin -->
+<plugin>
+    <groupId>net.Indyuce</groupId>
     <artifactId>MMOItems</artifactId>
-    <version>6.6.0</version>
-    <name>MMOItems</name>
-    <description>MMoitems Version VN make by oNGeaZ!!</description>
+    <version>3.1.0</version>
+    <!-- Ignore src/main in JAR packaging -->
+    <configuration>
+        <classesDirectory>src</classesDirectory>
+        <excludes>
+            <exclude>main</exclude>
+        </excludes>
+    </configuration>
+</plugin>
 
 	<properties>
 		<downloadSources>false</downloadSources>
